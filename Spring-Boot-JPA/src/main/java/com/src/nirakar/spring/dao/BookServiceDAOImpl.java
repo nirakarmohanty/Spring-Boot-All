@@ -1,6 +1,8 @@
 package com.src.nirakar.spring.dao;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,18 +17,19 @@ public class BookServiceDAOImpl implements IBookServiceDAO {
 	private BookServiceJPA booksvcJPA;
 
 	@Override
-	public List<String> getAllBooks() {
+	public List<Book> getAllBooks() {
 		
 		 List<Book> allBookDetails = (List<Book>) booksvcJPA.findAll();
-		 //List<Book> collect = allBookDetails.stream().filter(predicate -> predicate.getName()!=null).collect(Collectors.toList());
-		 return allBookDetails.stream().map(book->book.getAuthor()).collect(Collectors.toList());
+		 return allBookDetails;
 		 
 	}
 
 	@Override
 	public List<String> getAllAuthors() {
-		// TODO Auto-generated method stub
-		return null;
+		 List<Book> allBookDetails = (List<Book>) booksvcJPA.findAll();
+		 Set<String> set = new HashSet<>(allBookDetails.size());
+		 List<Book> collect = allBookDetails.stream().filter(p -> set.add(p.getAuthor())).collect(Collectors.toList());
+		 return collect.stream().distinct().map(book->book.getAuthor()).collect(Collectors.toList());
 	}
 
 }

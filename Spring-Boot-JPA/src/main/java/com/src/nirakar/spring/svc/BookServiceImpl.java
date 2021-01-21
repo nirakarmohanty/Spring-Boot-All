@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.src.nirakar.spring.dao.IBookServiceDAO;
+import com.src.nirakar.spring.dto.Book;
 
 @Component
 public class BookServiceImpl implements IBooksService {
@@ -14,14 +15,13 @@ public class BookServiceImpl implements IBooksService {
 	private IBookServiceDAO booksvcDao;
 	
 	@Override
-	public List<String> getAllBookNames() {
+	public List<Book> getAllBookNames() {
 		return booksvcDao.getAllBooks();
 	}
 
 	@Override
 	public List<String> getAllAuthors() {
-		// TODO Auto-generated method stub
-		return booksvcDao.getAllAuthors();
+		return booksvcDao.getAllAuthors();		
 	}
 
 }

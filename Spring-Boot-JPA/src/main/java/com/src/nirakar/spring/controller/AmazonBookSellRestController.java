@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.src.nirakar.spring.dto.Book;
 import com.src.nirakar.spring.svc.IBooksService;
 
 @RestController
-@RequestMapping(value = "/rest-ipl")
-public class IPLController {
+@RequestMapping(value = "/rest-books")
+public class AmazonBookSellRestController {
+	
 	@Autowired
 	IBooksService booksvc;
 
@@ -21,8 +23,14 @@ public class IPLController {
 		return "hello World"; 
 	}
 	
+	// http://localhost:8181/rest-books/getAllDetails
 	@RequestMapping(value = "/getAllDetails", method = RequestMethod.GET)
-	public List<String> getAllBookDetails() {
-		return booksvc.getAllBookNames(); 
+	public List<Book> getAllBookDetails() {
+		return booksvc.getAllBookNames();  
 	}
+	@RequestMapping(value = "/getAllAuthor", method = RequestMethod.GET)
+	public List<String> getAuthor() {
+		return booksvc.getAllAuthors();  
+	}
+	
 } 
