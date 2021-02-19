@@ -24,4 +24,10 @@ public class BookServiceImpl implements IBooksService {
 		return booksvcDao.getAllAuthors();		
 	}
 
+	@Override
+	public List<Book> getAuthorDetails(String author) {
+		return booksvcDao.getAuthorDetails(author);
+	}
+
+	
 }

@@ -10,4 +10,6 @@ public interface IBooksService {
 	
 	List<String> getAllAuthors();
 
+	List<Book> getAuthorDetails(String author);
+
 }

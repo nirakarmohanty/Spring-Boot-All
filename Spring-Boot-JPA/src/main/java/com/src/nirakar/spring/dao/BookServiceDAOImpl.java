@@ -32,4 +32,10 @@ public class BookServiceDAOImpl implements IBookServiceDAO {
 		 return collect.stream().distinct().map(book->book.getAuthor()).collect(Collectors.toList());
 	}
 
+	@Override
+	public List<Book> getAuthorDetails(String author) {
+		// TODO Auto-generated method stub
+		return booksvcJPA.findByAuthor(author);
+	}
+
 }

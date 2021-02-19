@@ -33,4 +33,8 @@ public class AmazonBookSellRestController {
 		return booksvc.getAllAuthors();  
 	}
 	
+	@RequestMapping(value = "/getAuthorDetails", method = RequestMethod.GET)
+	public List<Book> getAuthorDetails(String author) {
+		return booksvc.getAuthorDetails(author);  
+	}
 } 

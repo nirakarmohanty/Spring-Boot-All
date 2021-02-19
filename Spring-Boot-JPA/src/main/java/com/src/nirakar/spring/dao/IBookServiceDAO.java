@@ -10,4 +10,6 @@ public interface IBookServiceDAO {
 
 	List<String> getAllAuthors();
 
+	List<Book> getAuthorDetails(String author);
+
 }
