@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: Actuator Service Exmaple
+
+#Info End point
+info:
+  app:
+    name: "Actuator Service Exmaple"
+    description: This project explains about Actuator
+    version: 1.0.1
+    
+
