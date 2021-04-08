@@ -11,5 +11,12 @@ info:
     name: "Actuator Service Exmaple"
     description: This project explains about Actuator
     version: 1.0.1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
     
 
