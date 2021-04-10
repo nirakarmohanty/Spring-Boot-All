@@ -21,4 +21,10 @@ public class ActuatorRestSvc {
 		return service.prepareMessage(message.toUpperCase());
 	}
 	
+	//http://localhost:8080/getEmployeeDetails/10
+	
+	@GetMapping("/getEmployeeDetails/{id}")	
+	public EmployeeBO getEmployeeDetails(@PathVariable("id") Integer id) {
+		return service.prepareEmployee(id);
+	}
 }
