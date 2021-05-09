@@ -7,7 +7,8 @@
 		</dependency>
 
 ### All End points
-	/auditevents - lists security audit-related events such as user login/logout. Also,we can filter by principal or type among other 	fields.
+
+	auditevents] - lists security audit-related events such as user login/logout. Also,we can filter by principal or type among other 	fields.
 	/beans returns all available beans in our BeanFactory. Unlike /auditevents, it doesn't support 	filtering.
 	/conditions, formerly known as /autoconfig, builds a report of conditions around autoconfiguration.
 	/configprops allows us to fetch all @ConfigurationProperties beans.
