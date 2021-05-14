@@ -17,7 +17,7 @@ import com.src.nirakar.spring.mongodb.dto.Student;
 import com.src.nirakar.spring.mongodb.service.StudentSvc;
 
 @RestController
-@RequestMapping("/api/student")
+//@RequestMapping("/api/student")
 public class StudentRestController {
 
 	@Autowired
