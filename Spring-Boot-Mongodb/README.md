@@ -5,7 +5,8 @@
 ### What are used
 1. Java Spring Boot
 2. Swagger 
-3
+3. Mongo DB
+3. Spring data JPA
 
 ### API URLS
 
