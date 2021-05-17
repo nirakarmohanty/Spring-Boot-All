@@ -10,7 +10,7 @@ spring:
 logging:  level:    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
 springdoc:
   swagger-ui:
-    path: /swagger-index.html
+    path: /swagger-ui.html
   api-docs:
     enabled: true
     path: /swagger-index.doc
